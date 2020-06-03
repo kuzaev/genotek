@@ -1,0 +1,58 @@
+@font-face {
+  font-family: "ALSStory";
+  src: url("../fonts/ALSStory.otf");
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "ALSStory";
+  background-color: #f4f4f6;
+}
+
+a {
+  color: #5a88c1;
+  text-decoration: none;
+}
+
+.button {
+  line-height: 1.88;
+  font-size: 16px;
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  width: 100%;
+  padding: 10px 20px;
+  border-radius: 30px;
+  outline: none;
+}
+
+.container {
+  margin: 60px auto 40px auto;
+
+  @media (min-width: 576px) {
+    max-width: 540px;
+  }
+
+  @media (min-width: 768px) {
+    max-width: 720px;
+  }
+
+  @media (min-width: 992px) {
+    max-width: 960px;
+  }
+
+  @media (min-width: 1200px) {
+    max-width: 1140px;
+  }
+
+  @media (min-width: 1600px) {
+    max-width: 1580px;
+    margin: 140 auto;
+  }
+}

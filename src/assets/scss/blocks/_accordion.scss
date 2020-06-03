@@ -1,0 +1,67 @@
+$dark-blue: #142536;
+$light-blue: #22374b;
+
+.accordion {
+  background-color: $dark-blue;
+  color: #fff;
+
+  &__item {
+    &:hover {
+      background-color: #22374b;
+    }
+    border-bottom: 1px solid #405265;
+    &-header {
+      display: flex;
+      padding: 15px 15px 14px 15px;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &-title {
+      line-height: 1.27;
+      font-size: 22px;
+      padding-right: 30px;
+    }
+    &-button {
+      background-image: url("../images/arrow.svg");
+      background-repeat: no-repeat;
+      min-width: 14px;
+      height: 8px;
+      background-size: contain;
+      transform: rotate(0);
+      transition: 0.5s ease-in-out;
+    }
+    &-content {
+      padding: 0 15px;
+      max-height: 0;
+      overflow: hidden;
+      transition: 1s ease-in-out;
+    }
+    &-wrap {
+      border-top: 1px solid #405265;
+      padding: 15px 0 30px 0;
+    }
+  }
+
+  &__item.open {
+    & .accordion__item-button {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+@media (min-width: 1600px) {
+    .accordion {
+        &__item {
+            &-header {
+                padding: 30px 45px;
+            }
+            &-content {
+                padding: 0 45px;
+            }
+            &-wrap {
+                border-top: 1px solid #405265;
+                padding: 30px 0;
+            }
+        }
+    }
+}

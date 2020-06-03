@@ -1,0 +1,57 @@
+.form {
+  &__group {
+    position: relative;
+  }
+
+  &__clear-button {
+    background-image: url("../images/remove.svg");
+    height: 14px;
+    width: 14px;
+    position: absolute;
+    display: inline-block;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    display: none;
+
+    &.show {
+      display: block;
+    }
+  }
+
+  &__control {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid #5c738b;
+    line-height: 1.5;
+    font-size: 16px;
+    width: 100%;
+    padding-bottom: 4px;
+    color: #fff;
+    outline: none;
+
+    &::placeholder {
+      color: #fff;
+    }
+
+    &:focus {
+      border-color: #fff;
+    }
+  }
+
+  &__group + &__group {
+    margin-top: 30px;
+  }
+
+  &__group + &__button {
+    margin-top: 44px;
+  }
+}
+@media (min-width: 1600px) {
+  .form {
+    &__button.button {
+      width: auto;
+    }
+  }
+}
